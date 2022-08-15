@@ -2,6 +2,6 @@ from HduSrunLogin.LoginManager import LoginManager
 
 lm = LoginManager()
 lm.login(
-    username = "Your srun account",
-    password = "Your password"
+    username="Your srun account",
+    password="Your password"
 )

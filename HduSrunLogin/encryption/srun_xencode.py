@@ -1,13 +1,19 @@
 import math
+
+
 def force(msg):
     ret = []
     for w in msg:
         ret.append(ord(w))
     return bytes(ret)
+
+
 def ordat(msg, idx):
     if len(msg) > idx:
         return ord(msg[idx])
     return 0
+
+
 def sencode(msg, key):
     l = len(msg)
     pwd = []
@@ -18,6 +24,8 @@ def sencode(msg, key):
     if key:
         pwd.append(l)
     return pwd
+
+
 def lencode(msg, key):
     l = len(msg)
     ll = (l - 1) << 2
@@ -32,6 +40,8 @@ def lencode(msg, key):
     if key:
         return "".join(msg)[0:ll]
     return "".join(msg)
+
+
 def get_xencode(msg, key):
     if msg == "":
         return ""
@@ -68,6 +78,3 @@ def get_xencode(msg, key):
         z = pwd[n]
         q = q - 1
     return lencode(pwd, False)
-if __name__ == '__main__':
-    str1=get_xencode('{"username":"201626203044@cmcc","password":"15879684798qq","ip":"10.128.96.249","acid":"1","enc_ver":"srun_bx1"}',"e6843f26b8544327a3a25978dd3c5f89e6b745df1732993b88fe082c13a34cb9")
-    print(type(str1))
