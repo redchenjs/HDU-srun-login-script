@@ -1,4 +1,4 @@
-from BitSrunLogin.LoginManager import LoginManager
+from HduSrunLogin.LoginManager import LoginManager
 
 lm = LoginManager()
 lm.login(
