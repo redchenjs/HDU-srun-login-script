@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from HduSrunLogin.LoginManager import LoginManager
 
 lm = LoginManager()
